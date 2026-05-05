@@ -179,3 +179,120 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+# 🚀 Spring Boot Mastery — Day 3
+
+## 📌 Objective
+
+Build dynamic REST APIs using request parameters and path variables.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Query parameters using `@RequestParam`
+* Path variables using `@PathVariable`
+* Dynamic API design
+* URL-based data passing
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Web
+
+---
+
+## 📁 Project Structure
+
+src/
+└── main/
+├── java/
+│   └── com/manikanta/basics/
+│       ├── Day1Application.java
+│       └── controller/
+│           └── HelloController.java
+└── resources/
+└── application.properties
+
+---
+
+## 🔌 API Endpoints
+
+### 1. Greet User (Request Param)
+
+GET /greet?name=Manikanta
+
+Response:
+Hello Manikanta 🚀
+
+---
+
+### 2. Welcome User (Path Variable)
+
+GET /welcome/{name}
+
+Example:
+GET /welcome/Manikanta
+
+Response:
+Welcome Manikanta 🎉
+
+---
+
+### 3. Age API
+
+GET /age?age=21
+
+Response:
+Your age is 21
+
+---
+
+### 4. Square API
+
+GET /square/{num}
+
+Example:
+GET /square/5
+
+Response:
+25
+
+---
+
+## ▶️ How to Run
+
+1. Clone repository
+2. Open in IDE
+3. Run `Day1Application.java`
+4. Test endpoints via browser/Postman
+
+---
+
+## 🎯 Learning Outcome
+
+* Build dynamic APIs
+* Understand URL parameter handling
+* Learn difference between query params and path variables
+
+---
+
+## 📅 Progress
+
+✔ Day 1: Setup
+✔ Day 2: Basic APIs
+✔ Day 3: Dynamic APIs
+⬜ Day 4: Advanced request handling
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---
