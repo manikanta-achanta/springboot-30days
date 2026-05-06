@@ -296,3 +296,114 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+# 🚀 Spring Boot Mastery — Day 4
+
+## 📌 Objective
+
+Learn advanced request handling techniques using multiple request parameters, default values, and optional parameters in Spring Boot REST APIs.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Multiple `@RequestParam`
+* Default values using `defaultValue`
+* Optional parameters using `required = false`
+* Dynamic API behavior
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Web
+
+---
+
+## 📁 Project Structure
+
+src/
+└── main/
+├── java/
+│   └── com/manikanta/basics/
+│       └── controller/
+│           └── UserController.java
+└── resources/
+└── application.properties
+
+---
+
+## 🔌 API Endpoints
+
+### Student API
+
+GET /student?name=Manikanta&age=21
+
+Response:
+Student Name: Manikanta, Age: 21
+
+---
+
+### Country API
+
+GET /country
+
+Response:
+Country: India
+
+---
+
+### Search API
+
+GET /search?keyword=java
+
+Response:
+Searching for: java
+
+---
+
+### Add API
+
+GET /add?a=10&b=20
+
+Response:
+30
+
+---
+
+## ▶️ How to Run
+
+1. Clone repository
+2. Open project in IDE
+3. Run Spring Boot application
+4. Test endpoints using browser or Postman
+
+---
+
+## 🎯 Learning Outcome
+
+* Handle dynamic request parameters
+* Build flexible APIs
+* Design cleaner request handling
+
+---
+
+## 📅 Progress
+
+✔ Day 1: Spring Boot setup
+✔ Day 2: REST controllers
+✔ Day 3: Dynamic APIs
+✔ Day 4: Advanced request handling
+⬜ Day 5: POST APIs and JSON data
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---
