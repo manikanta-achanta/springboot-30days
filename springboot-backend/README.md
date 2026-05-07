@@ -407,3 +407,116 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+
+# 🚀 Spring Boot Mastery — Day 5
+
+## 📌 Objective
+
+Learn how to build POST APIs using JSON data and `@RequestBody` in Spring Boot.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* HTTP POST requests
+* JSON request body
+* `@PostMapping`
+* `@RequestBody`
+* Java model classes
+* JSON to Java object mapping
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Web
+
+---
+
+## 📁 Project Structure
+
+src/
+└── main/
+├── java/
+│   └── com/manikanta/basics/
+│       ├── controller/
+│       │   └── UserController.java
+│       └── model/
+│           ├── User.java
+│           └── Product.java
+└── resources/
+└── application.properties
+
+---
+
+## 🔌 API Endpoints
+
+### Create User API
+
+POST /users
+
+Request JSON:
+{
+"name": "Manikanta",
+"age": 21
+}
+
+Response:
+User created: Manikanta, Age: 21
+
+---
+
+### Create Product API
+
+POST /products
+
+Request JSON:
+{
+"name": "Laptop",
+"price": 55000
+}
+
+Response:
+Product: Laptop, Price: 55000
+
+---
+
+## ▶️ How to Run
+
+1. Clone repository
+2. Open project in IDE
+3. Run Spring Boot application
+4. Test APIs using Postman
+
+---
+
+## 🎯 Learning Outcome
+
+* Build POST APIs
+* Handle JSON request bodies
+* Convert JSON into Java objects
+* Understand object mapping in Spring Boot
+
+---
+
+## 📅 Progress
+
+✔ Day 1: Setup
+✔ Day 2: REST controllers
+✔ Day 3: Dynamic APIs
+✔ Day 4: Request handling
+✔ Day 5: POST APIs & JSON
+⬜ Day 6: ResponseEntity & clean responses
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---

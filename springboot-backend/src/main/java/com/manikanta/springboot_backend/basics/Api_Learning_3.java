@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-
 public class Api_Learning_3 {
 
     @GetMapping("/student")
