@@ -520,3 +520,126 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+
+# 🚀 Spring Boot Mastery — Day 6
+
+## 📌 Objective
+
+Learn how to return structured JSON responses using `ResponseEntity` and proper HTTP status codes in Spring Boot REST APIs.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* JSON response handling
+* `ResponseEntity`
+* HTTP status codes
+* Structured API response design
+* Response models
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Web
+
+---
+
+## 📁 Project Structure
+
+src/
+└── main/
+├── java/
+│   └── com/manikanta/basics/
+│       ├── controller/
+│       │   └── UserController.java
+│       └── model/
+│           ├── User.java
+│           ├── Product.java
+│           └── ApiResponse.java
+└── resources/
+└── application.properties
+
+---
+
+## 🔌 API Endpoints
+
+### Create User API
+
+POST /users
+
+Response:
+{
+"message": "User created successfully",
+"status": 201
+}
+
+HTTP Status:
+201 CREATED
+
+---
+
+### Create Product API
+
+POST /products
+
+Response:
+{
+"message": "Product added successfully",
+"status": 201
+}
+
+---
+
+### Health API
+
+GET /health
+
+Response:
+{
+"message": "Server is running",
+"status": 200
+}
+
+---
+
+## ▶️ How to Run
+
+1. Clone repository
+2. Open in IDE
+3. Run Spring Boot application
+4. Test APIs using Postman
+
+---
+
+## 🎯 Learning Outcome
+
+* Return structured JSON responses
+* Understand HTTP status codes
+* Build professional REST APIs
+* Use `ResponseEntity` effectively
+
+---
+
+## 📅 Progress
+
+✔ Day 1: Setup
+✔ Day 2: REST controllers
+✔ Day 3: Dynamic APIs
+✔ Day 4: Request handling
+✔ Day 5: POST APIs & JSON
+✔ Day 6: JSON responses & status codes
+⬜ Day 7: Mini API project
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---

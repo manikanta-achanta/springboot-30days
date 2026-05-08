@@ -1,5 +1,6 @@
 package com.manikanta.springboot_backend.basics;
 
+
 import com.manikanta.springboot_backend.basics.model.Product;
 import com.manikanta.springboot_backend.basics.model.User;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -7,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Api_learning_4 {
+public class Api_Learning_4 {
 
     @PostMapping("/users")
     public String createUser(@RequestBody User user)
