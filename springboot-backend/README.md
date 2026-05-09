@@ -643,3 +643,130 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+
+# 🚀 Spring Boot Mastery — Day 7
+
+## 📌 Objective
+
+Build a mini Student Management REST API project using Spring Boot fundamentals learned in the first week.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* REST API design
+* GET and POST APIs
+* Path variables
+* JSON request handling
+* `ResponseEntity`
+* In-memory data storage
+* Controller-level request mapping
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Web
+
+---
+
+## 📁 Project Structure
+
+src/
+└── main/
+├── java/
+│   └── com/manikanta/basics/
+│       ├── controller/
+│       │   └── StudentController.java
+│       └── model/
+│           ├── Student.java
+│           └── ApiResponse.java
+└── resources/
+└── application.properties
+
+---
+
+## 🔌 API Endpoints
+
+### Create Student
+
+POST /students
+
+Request JSON:
+{
+"id": 1,
+"name": "Manikanta",
+"age": 21
+}
+
+Response:
+{
+"message": "Student added successfully",
+"status": 201
+}
+
+---
+
+### Get All Students
+
+GET /students
+
+---
+
+### Get Student By ID
+
+GET /students/{id}
+
+Example:
+GET /students/1
+
+---
+
+### Health API
+
+GET /students/health
+
+Response:
+{
+"message": "Student API is running",
+"status": 200
+}
+
+---
+
+## ▶️ How to Run
+
+1. Clone repository
+2. Open project in IDE
+3. Run Spring Boot application
+4. Test APIs using Postman
+
+---
+
+## 🎯 Learning Outcome
+
+* Build a mini REST API project
+* Combine GET and POST APIs
+* Handle JSON requests and responses
+* Organize backend project structure
+
+---
+
+## 📅 Progress
+
+✔ Phase 1 Completed
+✔ Spring Boot fundamentals completed
+⬜ Phase 2: Clean Architecture begins
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---

@@ -1,5 +1,4 @@
-package com.manikanta.springboot_backend.basics;
-
+package com.manikanta.springboot_backend.basics.controller;
 
 import com.manikanta.springboot_backend.basics.model.Product;
 import com.manikanta.springboot_backend.basics.model.User;
