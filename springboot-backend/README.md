@@ -770,3 +770,103 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+
+# 🚀 Spring Boot Mastery — Day 8
+
+## 📌 Objective
+
+Understand clean architecture principles by separating controller logic and business logic using the service layer in Spring Boot.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Layered architecture
+* Controller layer
+* Service layer
+* Business logic separation
+* Dependency Injection
+* Constructor Injection
+* `@Service`
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Web
+
+---
+
+## 📁 Project Structure
+
+src/
+└── main/
+├── java/
+│   └── com/manikanta/basics/
+│       ├── controller/
+│       │   └── StudentController.java
+│       ├── service/
+│       │   └── StudentService.java
+│       └── model/
+│           └── Student.java
+└── resources/
+└── application.properties
+
+---
+
+## 🔌 API Endpoints
+
+### Create Student
+
+POST /students
+
+---
+
+### Get All Students
+
+GET /students
+
+---
+
+### Get Student By ID
+
+GET /students/{id}
+
+---
+
+## ▶️ How to Run
+
+1. Clone repository
+2. Open in IDE
+3. Run Spring Boot application
+4. Test APIs using Postman
+
+---
+
+## 🎯 Learning Outcome
+
+* Understand clean backend architecture
+* Separate controller and business logic
+* Use service layer effectively
+* Learn dependency injection basics
+
+---
+
+## 📅 Progress
+
+✔ Phase 1 Completed
+✔ Day 8: Service layer architecture
+⬜ Day 9: Advanced service layer concepts
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---
