@@ -870,3 +870,115 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+# 🚀 Spring Boot Mastery — Day 9
+
+## 📌 Objective
+
+Learn interface-based service architecture and implement loose coupling using service abstraction in Spring Boot.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Service interfaces
+* Service implementation classes
+* Loose coupling
+* Abstraction
+* Dependency Injection with interfaces
+* Clean architecture principles
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Web
+
+---
+
+## 📁 Project Structure
+
+src/
+└── main/
+├── java/
+│   └── com/manikanta/springboot_backend/basics/
+│       ├── controller/
+│       │   └── StudentController.java
+│       ├── service/
+│       │   ├── StudentService.java
+│       │   └── impl/
+│       │       └── StudentServiceImpl.java
+│       └── model/
+│           └── Student.java
+└── resources/
+└── application.properties
+
+---
+
+## 🔌 API Endpoints
+
+### Create Student
+
+POST /students
+
+---
+
+### Get All Students
+
+GET /students
+
+---
+
+### Get Student By ID
+
+GET /students/{id}
+
+---
+
+### Update Student
+
+PUT /students/{id}
+
+---
+
+### Delete Student
+
+DELETE /students/{id}
+
+---
+
+## ▶️ How to Run
+
+1. Clone repository
+2. Open project in IDE
+3. Run Spring Boot application
+4. Test APIs using Postman
+
+---
+
+## 🎯 Learning Outcome
+
+* Understand interface-based architecture
+* Achieve loose coupling
+* Implement service abstraction
+* Build scalable backend structure
+
+---
+
+## 📅 Progress
+
+✔ Day 8: Service layer
+✔ Day 9: Interface-based architecture
+⬜ Day 10: Advanced Dependency Injection
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---

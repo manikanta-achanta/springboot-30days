@@ -1,6 +1,6 @@
 package com.manikanta.springboot_backend.basics.controller;
 
-import com.manikanta.springboot_backend.basics.Service.StudentService;
+import com.manikanta.springboot_backend.basics.service.StudentService;
 import com.manikanta.springboot_backend.basics.model.Student;
 import org.springframework.web.bind.annotation.*;
 
