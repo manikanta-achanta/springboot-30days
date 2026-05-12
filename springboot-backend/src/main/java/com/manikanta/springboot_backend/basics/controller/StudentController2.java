@@ -11,7 +11,7 @@ import java.util.List;
 public class StudentController2 {
 
     private final StudentService studentService;
-    public StudentController2(StudentService studentService)
+    public StudentController2(  StudentService studentService)
     {
         this.studentService=studentService;
 

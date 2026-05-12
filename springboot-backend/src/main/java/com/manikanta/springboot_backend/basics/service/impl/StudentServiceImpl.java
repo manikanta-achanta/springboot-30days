@@ -1,15 +1,17 @@
-package com.manikanta.springboot_backend.basics.service.implementation;
+package com.manikanta.springboot_backend.basics.service.impl;
 
 import com.manikanta.springboot_backend.basics.model.Student;
 import com.manikanta.springboot_backend.basics.service.StudentService;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class StudentServiceImplementation implements StudentService {
+@Primary
+public class StudentServiceImpl implements StudentService {
 
     private final List<Student> students = new ArrayList<>();
 

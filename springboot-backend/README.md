@@ -982,3 +982,78 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+# 🚀 Spring Boot Mastery — Day 10
+
+## 📌 Objective
+
+Understand advanced dependency injection concepts, bean lifecycle, multiple bean management, and the use of `@Autowired`, `@Primary`, and `@Qualifier` in Spring Boot.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Spring Beans
+* Bean lifecycle
+* Dependency Injection
+* `@Autowired`
+* Constructor Injection
+* Multiple bean problem
+* `@Primary`
+* `@Qualifier`
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Web
+
+---
+
+## 📁 Project Structure
+
+src/
+└── main/
+├── java/
+│   └── com/manikanta/springboot_backend/basics/
+│       ├── controller/
+│       │   └── StudentController.java
+│       ├── service/
+│       │   ├── StudentService.java
+│       │   └── impl/
+│       │       ├── StudentServiceImpl.java
+│       │       └── StudentServiceMongoImpl.java
+│       └── model/
+│           └── Student.java
+└── resources/
+└── application.properties
+
+---
+
+## 🎯 Learning Outcome
+
+* Understand Spring Bean lifecycle
+* Learn dependency injection deeply
+* Handle multiple service implementations
+* Use `@Primary` and `@Qualifier`
+* Understand constructor injection benefits
+
+---
+
+## 📅 Progress
+
+✔ Day 9: Interface-based architecture
+✔ Day 10: Advanced dependency injection
+⬜ Day 11: `@Autowired` vs Constructor Injection in depth
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---
