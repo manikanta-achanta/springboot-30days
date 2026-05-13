@@ -1057,3 +1057,75 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+# 🚀 Spring Boot Mastery — Day 11
+
+## 📌 Objective
+
+Understand different dependency injection types and bean scopes in Spring Boot.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Constructor Injection
+* Setter Injection
+* Field Injection
+* Bean Scope
+* Singleton Scope
+* Prototype Scope
+* Dependency management
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Web
+
+---
+
+## 📁 Project Structure
+
+src/
+└── main/
+├── java/
+│   └── com/manikanta/springboot_backend/basics/
+│       ├── controller/
+│       │   └── StudentController.java
+│       ├── service/
+│       │   ├── StudentService.java
+│       │   └── impl/
+│       │       └── StudentServiceImpl.java
+│       └── model/
+│           └── Student.java
+└── resources/
+└── application.properties
+
+---
+
+## 🎯 Learning Outcome
+
+* Understand all dependency injection types
+* Learn why constructor injection is preferred
+* Understand bean scopes in Spring
+* Compare singleton and prototype beans
+
+---
+
+## 📅 Progress
+
+✔ Day 10: Advanced dependency injection
+✔ Day 11: Injection types & bean scopes
+⬜ Day 12: DTO and Entity concepts
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---

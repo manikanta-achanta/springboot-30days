@@ -4,12 +4,15 @@ import com.manikanta.springboot_backend.basics.model.Student;
 import com.manikanta.springboot_backend.basics.service.StudentService;
 
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+// Prototype scope creates new object every time
+@Scope("Prototype")
 @Primary
 public class StudentServiceImpl implements StudentService {
 
