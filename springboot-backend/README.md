@@ -1129,3 +1129,88 @@ Manikanta
 B.Tech CSE
 
 ---
+
+# 🚀 Spring Boot Mastery — Day 12
+
+## 📌 Objective
+
+Understand DTO (Data Transfer Object) concepts and implement clean API response design in Spring Boot.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* DTO vs Entity
+* API response design
+* Data hiding
+* Entity-to-DTO conversion
+* Clean architecture practices
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Web
+
+---
+
+## 📁 Project Structure
+
+src/
+└── main/
+├── java/
+│   └── com/manikanta/springboot_backend/basics/
+│       ├── controller/
+│       │   └── StudentController.java
+│       ├── dto/
+│       │   └── StudentDTO.java
+│       ├── model/
+│       │   └── Student.java
+│       ├── service/
+│       │   └── StudentService.java
+│       └── service/impl/
+│           └── StudentServiceImpl.java
+└── resources/
+└── application.properties
+
+---
+
+## 🔌 API Endpoints
+
+### Get Student DTO
+
+GET /students/dto/{id}
+
+Response:
+{
+"id": 1,
+"name": "Manikanta"
+}
+
+---
+
+## 🎯 Learning Outcome
+
+* Understand DTO usage
+* Prevent exposing sensitive data
+* Build cleaner APIs
+* Separate internal model from API response
+
+---
+
+## 📅 Progress
+
+✔ Day 11: Bean scopes & injection types
+✔ Day 12: DTO and Entity separation
+⬜ Day 13: Advanced DTO mapping
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---

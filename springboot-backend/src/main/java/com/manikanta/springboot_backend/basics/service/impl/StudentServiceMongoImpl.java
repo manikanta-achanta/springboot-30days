@@ -1,5 +1,6 @@
 package com.manikanta.springboot_backend.basics.service.impl;
 
+import com.manikanta.springboot_backend.basics.dto.StudentDTO;
 import com.manikanta.springboot_backend.basics.model.Student;
 import com.manikanta.springboot_backend.basics.service.StudentService;
 
@@ -36,5 +37,14 @@ public class StudentServiceMongoImpl implements StudentService {
             Student updateStudent) {
 
         return "Updated using Mongo service";
+    }
+
+    @Override
+    public StudentDTO convertToDTO(Student student)
+    {
+        return new StudentDTO(
+                student.getId(),
+                student.getName()
+        );
     }
 }

@@ -1,5 +1,6 @@
 package com.manikanta.springboot_backend.basics.service.impl;
 
+import com.manikanta.springboot_backend.basics.dto.StudentDTO;
 import com.manikanta.springboot_backend.basics.model.Student;
 import com.manikanta.springboot_backend.basics.service.StudentService;
 
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Service
 // Prototype scope creates new object every time
-@Scope("Prototype")
+//@Scope("prototype")
 @Primary
 public class StudentServiceImpl implements StudentService {
 
@@ -48,11 +49,11 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public String deleteStudentByID(int id)
     {
-        for(Student student : students)
+        for(int i = 0; i < students.size(); i++)
         {
-            if(student.getId() == id)
+            if(students.get(i).getId() == id)
             {
-                students.remove(student);
+                students.remove(i);
                 return "student deleted successfully";
             }
         }
@@ -77,5 +78,14 @@ public class StudentServiceImpl implements StudentService {
         }
 
         return "student not found";
+    }
+
+    @Override
+    public StudentDTO convertToDTO(Student student)
+    {
+        return new StudentDTO(
+                student.getId(),
+                student.getName()
+        );
     }
 }

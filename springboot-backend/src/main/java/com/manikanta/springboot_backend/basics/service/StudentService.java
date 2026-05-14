@@ -1,9 +1,10 @@
 package com.manikanta.springboot_backend.basics.service;
 
+import com.manikanta.springboot_backend.basics.dto.StudentDTO;
 import com.manikanta.springboot_backend.basics.model.Student;
 import java.util.List;
 
-import com.manikanta.springboot_backend.basics.model.Student;
+
 
 import java.util.List;
 
@@ -18,4 +19,6 @@ public interface StudentService {
     String deleteStudentByID(int id);
 
     String updateStudentByID(int id, Student updateStudent);
+
+    StudentDTO convertToDTO(Student student);
 }

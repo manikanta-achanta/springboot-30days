@@ -4,13 +4,15 @@ public class Student {
     private int id;
     private  String name;
     private  int age;
+    private String password;
 
 
-  public Student(int id,String name,int age)
+  public Student(int id,String name,int age,String password)
   {
       this.id=id;
       this.name=name;
       this.age=age;
+      this.password=password;
   }
 
   public int getId()
@@ -37,6 +39,15 @@ public class Student {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getPassword()
+    {
+        return password;
+    }
+    public void setPassword(String password)
+    {
+        this.password=password;
     }
 
 

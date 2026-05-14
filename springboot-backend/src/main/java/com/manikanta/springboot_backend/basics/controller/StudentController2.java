@@ -3,6 +3,8 @@ package com.manikanta.springboot_backend.basics.controller;
 import com.manikanta.springboot_backend.basics.service.StudentService;
 import com.manikanta.springboot_backend.basics.model.Student;
 import org.springframework.web.bind.annotation.*;
+import com.manikanta.springboot_backend.basics.dto.StudentDTO;
+
 
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class StudentController2 {
 
 
     @PostMapping
-    public String CreateStudent(@RequestBody Student student)
+    public String createStudent(@RequestBody Student student)
     {
         return studentService.addStudent(student);
 
@@ -47,6 +49,22 @@ public class StudentController2 {
     public String updateStudent(@PathVariable int id , @RequestBody Student updateStudent)
     {
         return studentService.updateStudentByID(id,updateStudent);
+    }
+
+
+    @GetMapping("/dto/{id}")
+    public StudentDTO getStudentDTO(
+            @PathVariable int id)
+    {
+        Student student =
+                studentService.getStudentByID(id);
+        if(student == null)
+        {
+            return null;
+        }
+
+
+        return studentService.convertToDTO(student);
     }
 
 
