@@ -1214,3 +1214,76 @@ Manikanta
 B.Tech CSE
 
 ---
+
+# 🚀 Spring Boot Mastery — Day 13
+
+## 📌 Objective
+
+Improve DTO architecture by introducing mapper classes and separating object conversion logic from the service layer.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* DTO mapping
+* Mapper classes
+* Static utility methods
+* Separation of concerns
+* Cleaner architecture design
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Web
+
+---
+
+## 📁 Project Structure
+
+src/
+└── main/
+├── java/
+│   └── com/manikanta/springboot_backend/basics/
+│       ├── controller/
+│       │   └── StudentController.java
+│       ├── dto/
+│       │   └── StudentDTO.java
+│       ├── mapper/
+│       │   └── StudentMapper.java
+│       ├── model/
+│       │   └── Student.java
+│       ├── service/
+│       │   └── StudentService.java
+│       └── service/impl/
+│           └── StudentServiceImpl.java
+└── resources/
+└── application.properties
+
+---
+
+## 🎯 Learning Outcome
+
+* Separate mapping logic from service layer
+* Build reusable mapper utilities
+* Improve DTO architecture
+* Understand cleaner backend design
+
+---
+
+## 📅 Progress
+
+✔ Day 12: DTO and Entity separation
+✔ Day 13: Mapper-based DTO conversion
+⬜ Day 14: Mini project refactoring
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---

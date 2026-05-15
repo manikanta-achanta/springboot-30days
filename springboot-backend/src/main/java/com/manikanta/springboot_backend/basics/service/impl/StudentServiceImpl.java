@@ -80,12 +80,4 @@ public class StudentServiceImpl implements StudentService {
         return "student not found";
     }
 
-    @Override
-    public StudentDTO convertToDTO(Student student)
-    {
-        return new StudentDTO(
-                student.getId(),
-                student.getName()
-        );
-    }
 }

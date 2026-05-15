@@ -20,5 +20,4 @@ public interface StudentService {
 
     String updateStudentByID(int id, Student updateStudent);
 
-    StudentDTO convertToDTO(Student student);
 }

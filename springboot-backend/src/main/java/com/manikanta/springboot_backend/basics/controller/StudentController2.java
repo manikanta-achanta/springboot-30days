@@ -1,9 +1,10 @@
 package com.manikanta.springboot_backend.basics.controller;
 
+import com.manikanta.springboot_backend.basics.dto.StudentDTO;
 import com.manikanta.springboot_backend.basics.service.StudentService;
 import com.manikanta.springboot_backend.basics.model.Student;
 import org.springframework.web.bind.annotation.*;
-import com.manikanta.springboot_backend.basics.dto.StudentDTO;
+import com.manikanta.springboot_backend.basics.mapper.StudentMapper;
 
 
 import java.util.List;
@@ -58,13 +59,8 @@ public class StudentController2 {
     {
         Student student =
                 studentService.getStudentByID(id);
-        if(student == null)
-        {
-            return null;
-        }
 
-
-        return studentService.convertToDTO(student);
+        return StudentMapper.convertToDTO(student);
     }
 
 

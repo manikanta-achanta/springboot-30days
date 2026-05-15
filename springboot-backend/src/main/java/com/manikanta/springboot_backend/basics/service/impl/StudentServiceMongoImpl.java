@@ -39,12 +39,5 @@ public class StudentServiceMongoImpl implements StudentService {
         return "Updated using Mongo service";
     }
 
-    @Override
-    public StudentDTO convertToDTO(Student student)
-    {
-        return new StudentDTO(
-                student.getId(),
-                student.getName()
-        );
-    }
+
 }
