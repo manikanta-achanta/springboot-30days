@@ -1,11 +1,9 @@
 package com.manikanta.springboot_backend.basics.service.impl;
 
-import com.manikanta.springboot_backend.basics.dto.StudentDTO;
 import com.manikanta.springboot_backend.basics.model.Student;
 import com.manikanta.springboot_backend.basics.service.StudentService;
 
 import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

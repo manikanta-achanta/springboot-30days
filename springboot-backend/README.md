@@ -1287,3 +1287,79 @@ Manikanta
 B.Tech CSE
 
 ---
+
+# 🚀 Spring Boot Mastery — Day 14
+
+## 📌 Objective
+
+Refactor the mini Spring Boot project using cleaner package organization, better naming conventions, and separation of responsibilities.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Refactoring
+* Clean package structure
+* Naming conventions
+* Separation of concerns
+* Maintainable code design
+* Single Responsibility Principle
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Web
+
+---
+
+## 📁 Improved Project Structure
+
+src/
+└── main/
+├── java/
+│   └── com/manikanta/springboot_backend/basics/
+│       ├── controller/
+│       │   └── StudentController.java
+│       ├── dto/
+│       │   └── StudentDTO.java
+│       ├── mapper/
+│       │   └── StudentMapper.java
+│       ├── model/
+│       │   └── Student.java
+│       ├── service/
+│       │   ├── StudentService.java
+│       │   └── impl/
+│       │       ├── StudentServiceImpl.java
+│       │       └── StudentServiceMongoImpl.java
+│       └── exception/
+└── resources/
+└── application.properties
+
+---
+
+## 🎯 Learning Outcome
+
+* Refactor backend project structure
+* Apply professional naming conventions
+* Improve readability and maintainability
+* Organize layered architecture cleanly
+
+---
+
+## 📅 Progress
+
+✔ Day 13: DTO mapper architecture
+✔ Day 14: Project refactoring & clean structure
+⬜ Day 15: Mini project completion
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---
