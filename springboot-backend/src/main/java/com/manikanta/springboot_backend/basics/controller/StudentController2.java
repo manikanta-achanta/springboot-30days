@@ -1,5 +1,6 @@
 package com.manikanta.springboot_backend.basics.controller;
 
+import com.manikanta.springboot_backend.basics.dto.ApiResponse;
 import com.manikanta.springboot_backend.basics.dto.StudentDTO;
 import com.manikanta.springboot_backend.basics.service.StudentService;
 import com.manikanta.springboot_backend.basics.model.Student;
@@ -22,45 +23,76 @@ public class StudentController2 {
 
 
     @PostMapping
-    public String createStudent(@RequestBody Student student)
+    public ApiResponse<String> createStudent(@RequestBody Student student)
     {
-        return studentService.addStudent(student);
+        String response= studentService.addStudent(student);
+        return new ApiResponse<>(
+                response,
+                201,
+                null
+        );
 
     }
 
     @GetMapping
-    public List<Student> getStudents()
+    public ApiResponse<List<Student>> getStudents()
     {
-        return studentService.getAllStudents();
+        List<Student>students = studentService.getAllStudents();
+        return new ApiResponse<>(
+                "Students fetched successfully",
+                200,
+                students
+        );
     }
 
     @GetMapping("/{id}")
-    public Student getById(@PathVariable int id)
+    public ApiResponse<Student> getById(@PathVariable int id)
     {
-        return studentService.getStudentByID(id);
+        Student student= studentService.getStudentByID(id);
+        return  new ApiResponse<>(
+                "student fetched successfully",
+                201,
+                student
+        );
     }
 
     @DeleteMapping("/{id}")
-    public String deleteStudent(@PathVariable int id)
+    public ApiResponse<String> deleteStudent(@PathVariable int id)
     {
-        return studentService.deleteStudentByID(id);
+        String response= studentService.deleteStudentByID(id);
+        return new ApiResponse<>(
+                response,
+                201,
+                null
+        );
     }
 
     @PutMapping("/{id}")
-    public String updateStudent(@PathVariable int id , @RequestBody Student updateStudent)
+    public ApiResponse<String> updateStudent(@PathVariable int id , @RequestBody Student updateStudent)
     {
-        return studentService.updateStudentByID(id,updateStudent);
+        String response= studentService.updateStudentByID(id,updateStudent);
+        return new ApiResponse<>(
+                response,
+                201,
+                null
+        );
+
     }
 
 
     @GetMapping("/dto/{id}")
-    public StudentDTO getStudentDTO(
+    public ApiResponse<StudentDTO> getStudentDTO(
             @PathVariable int id)
     {
         Student student =
                 studentService.getStudentByID(id);
+        StudentDTO dto = StudentMapper.convertToDTO(student);
 
-        return StudentMapper.convertToDTO(student);
+        return new ApiResponse<>(
+                "student fetched successfully",
+                200,
+                dto
+                );
     }
 
 

@@ -11,13 +11,13 @@ public class Api_Learning_2 {
     // Request Param Example
     @GetMapping("/greet")
     public String greetUser(@RequestParam String name) {
-        return "Hello " + name + " 🚀";
+        return "Hello " + name ;
     }
 
     // Path Variable Example
     @GetMapping("/welcome/{name}")
     public String welcomeUser(@PathVariable String name) {
-        return "Welcome " + name + " 🎉";
+        return "Welcome " + name ;
     }
 
     @GetMapping("/age")
