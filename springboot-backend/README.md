@@ -1443,3 +1443,76 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+# 🚀 Spring Boot Mastery — Day 16
+
+## 📌 Objective
+
+Set up MySQL database integration and connect Spring Boot application using application.properties configuration.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* MySQL basics
+* Database persistence
+* JDBC connection
+* Spring Boot datasource configuration
+* application.properties setup
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* MySQL
+* MySQL Connector/J
+
+---
+
+## 📁 Database Configuration
+
+application.properties:
+
+spring.datasource.url=jdbc:mysql://localhost:3306/springboot_db
+
+spring.datasource.username=root
+
+spring.datasource.password=your_password
+
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+---
+
+## 🗄️ Database Setup
+
+SQL Command:
+CREATE DATABASE springboot_db;
+
+---
+
+## 🎯 Learning Outcome
+
+* Understand database persistence
+* Connect Spring Boot with MySQL
+* Configure datasource properties
+* Prepare backend for real database operations
+
+---
+
+## 📅 Progress
+
+✔ Phase 2 Completed
+✔ Day 16: MySQL connection setup
+⬜ Day 17: JPA and Entity mapping
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---
