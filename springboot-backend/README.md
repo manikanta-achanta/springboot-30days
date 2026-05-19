@@ -1516,3 +1516,86 @@ Manikanta
 B.Tech CSE
 
 ---
+# 🚀 Spring Boot Mastery — Day 17
+
+## 📌 Objective
+
+Learn JPA entity mapping and connect Java objects with MySQL database tables using Hibernate ORM.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* JPA
+* ORM (Object Relational Mapping)
+* `@Entity`
+* `@Table`
+* `@Id`
+* `@GeneratedValue`
+* Primary keys
+* Database table mapping
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* MySQL
+* Spring Data JPA
+* Hibernate
+
+---
+
+## 📁 Entity Mapping Example
+
+```java
+@Entity
+@Table(name = "students")
+public class Student {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    private String name;
+
+    private int age;
+}
+```
+
+---
+
+## 🗄️ Database Table
+
+Table Name:
+students
+
+Generated Automatically Using:
+spring.jpa.hibernate.ddl-auto=update
+
+---
+
+## 🎯 Learning Outcome
+
+* Understand JPA and ORM concepts
+* Map Java classes to database tables
+* Configure entity classes
+* Create database tables automatically using Hibernate
+
+---
+
+## 📅 Progress
+
+✔ Day 16: MySQL setup
+✔ Day 17: Entity mapping with JPA
+⬜ Day 18: Repository layer and database CRUD
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---

@@ -1,10 +1,22 @@
 package com.manikanta.springboot_backend.basics.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "students")
 public class Student {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private  String name;
     private  int age;
     private String password;
+
+    public Student()
+    {
+
+    }
 
 
   public Student(int id,String name,int age,String password)
