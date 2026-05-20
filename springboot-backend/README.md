@@ -1599,3 +1599,69 @@ Manikanta
 B.Tech CSE
 
 ---
+
+# 🚀 Spring Boot Mastery — Day 18
+
+## 📌 Objective
+
+Implement repository layer using Spring Data JPA and perform real database CRUD operations with MySQL.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Repository layer
+* JpaRepository
+* save()
+* findAll()
+* findById()
+* deleteById()
+* Optional
+* Real database CRUD
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL
+
+---
+
+## 📁 Repository Example
+
+```java id="7y21d0"
+public interface StudentRepository
+        extends JpaRepository<Student, Integer> {
+
+}
+```
+
+---
+
+## 🎯 Learning Outcome
+
+* Perform database CRUD operations
+* Use Spring Data JPA repositories
+* Replace temporary List storage with MySQL
+* Understand real backend persistence
+
+---
+
+## 📅 Progress
+
+✔ Day 17: Entity mapping
+✔ Day 18: Repository layer & database CRUD
+⬜ Day 19: Custom query methods
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---

@@ -1,6 +1,7 @@
 package com.manikanta.springboot_backend.basics.service.impl;
 
 import com.manikanta.springboot_backend.basics.model.Student;
+import com.manikanta.springboot_backend.basics.repository.StudentRepository;
 import com.manikanta.springboot_backend.basics.service.StudentService;
 
 import org.springframework.context.annotation.Primary;
@@ -15,48 +16,36 @@ import java.util.List;
 @Primary
 public class StudentServiceImpl implements StudentService {
 
-    private final List<Student> students = new ArrayList<>();
+    private final StudentRepository studentRepository;
+    public StudentServiceImpl(StudentRepository studentRepository)
+    {
+        this.studentRepository=studentRepository;
+    }
 
     @Override
     public String addStudent(Student student)
     {
-        students.add(student);
+        studentRepository.save(student);
         return "student added successfully";
     }
 
     @Override
     public List<Student> getAllStudents()
     {
-        return students;
+        return studentRepository.findAll();
     }
 
     @Override
     public Student getStudentByID(int id)
     {
-        for(Student student : students)
-        {
-            if(student.getId() == id)
-            {
-                return student;
-            }
-        }
-
-        return null;
+        return studentRepository.findById(id).orElse(null);
     }
 
     @Override
     public String deleteStudentByID(int id)
     {
-        for(int i = 0; i < students.size(); i++)
-        {
-            if(students.get(i).getId() == id)
-            {
-                students.remove(i);
-                return "student deleted successfully";
-            }
-        }
-
-        return "student not found";
+        studentRepository.deleteById(id);
+        return "student deleted successfully";
     }
 
     @Override
@@ -64,18 +53,23 @@ public class StudentServiceImpl implements StudentService {
             int id,
             Student updateStudent)
     {
-        for(Student student : students)
+        Student existingStudent = studentRepository.findById(id).orElse(null);
+        if(existingStudent==null)
         {
-            if(student.getId() == id)
-            {
-                student.setName(updateStudent.getName());
-                student.setAge(updateStudent.getAge());
-
-                return "student updated successfully";
-            }
+            return "Student not found";
         }
+        existingStudent.setName(
+                updateStudent.getName());
 
-        return "student not found";
+        existingStudent.setAge(
+                updateStudent.getAge());
+
+        existingStudent.setPassword(
+                updateStudent.getPassword());
+
+        studentRepository.save(existingStudent);
+
+        return "student updated successfully";
     }
 
 }
