@@ -72,4 +72,24 @@ public class StudentServiceImpl implements StudentService {
         return "student updated successfully";
     }
 
+    @Override
+    public List<Student> StudentGetByName(String name)
+    {
+        return studentRepository.findByName(name);
+
+
+    }
+
+    @Override
+    public List<Student> StudentGetByAge(int age)
+    {
+        return studentRepository.findByAge(age);
+    }
+
+    @Override
+    public List<Student> StudentGetByNameAge(String name,int age)
+    {
+        return studentRepository.findByNameAndAge(name,age);
+    }
+
 }

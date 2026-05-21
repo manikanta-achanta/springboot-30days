@@ -95,5 +95,36 @@ public class StudentController2 {
                 );
     }
 
+    @GetMapping("/search/name/{name} ")
+    public ApiResponse<List<Student>> StudentgetByName(@PathVariable String name)
+    {
+        List<Student> students=studentService.StudentGetByName(name);
+
+        return new ApiResponse<>(
+                "Students fetched successfully",
+                200,
+                students
+        );
+    }
+
+    @GetMapping("/search/age/{age}")
+    public ApiResponse<List<Student>>StudentGetByAge( @PathVariable int age)
+    {
+        List<Student> students=studentService.StudentGetByAge(age);
+        return new ApiResponse<>("Student fetched successfully",
+                200,
+                students);
+
+    }
+
+    @GetMapping("/search/{name}/{age}")
+    public ApiResponse<List<Student>> StudentGetByNameAge(@PathVariable String name,@PathVariable int age)
+    {
+        List<Student> students=studentService.StudentGetByNameAge(name,age);
+        return  new ApiResponse<>("Students fetched successfully",
+                200,
+                students);
+    }
+
 
 }

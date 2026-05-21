@@ -1665,3 +1665,75 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+# 🚀 Spring Boot Mastery — Day 19
+
+## 📌 Objective
+
+Implement custom derived query methods using Spring Data JPA naming conventions.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Derived query methods
+* Query generation
+* findByName()
+* findByAge()
+* Multiple condition queries
+* Convention over configuration
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL
+
+---
+
+## 📁 Repository Example
+
+```java id="j1d9x"
+public interface StudentRepository
+        extends JpaRepository<Student, Integer> {
+
+    List<Student> findByName(String name);
+
+    List<Student> findByAge(int age);
+
+    List<Student> findByNameAndAge(
+            String name,
+            int age);
+}
+```
+
+---
+
+## 🎯 Learning Outcome
+
+* Generate SQL automatically using method names
+* Build custom repository queries
+* Understand Spring Data JPA conventions
+* Perform advanced database searches
+
+---
+
+## 📅 Progress
+
+✔ Day 18: Repository CRUD operations
+✔ Day 19: Derived query methods
+⬜ Day 20: Advanced query methods and sorting
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---

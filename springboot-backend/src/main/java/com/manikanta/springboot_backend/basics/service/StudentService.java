@@ -20,4 +20,10 @@ public interface StudentService {
 
     String updateStudentByID(int id, Student updateStudent);
 
+    List<Student> StudentGetByName(String name);
+
+    List<Student> StudentGetByAge(int age);
+
+    List<Student> StudentGetByNameAge(String name ,int age);
+
 }
