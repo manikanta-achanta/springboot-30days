@@ -4,6 +4,7 @@ import com.manikanta.springboot_backend.basics.dto.ApiResponse;
 import com.manikanta.springboot_backend.basics.dto.StudentDTO;
 import com.manikanta.springboot_backend.basics.service.StudentService;
 import com.manikanta.springboot_backend.basics.model.Student;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 import com.manikanta.springboot_backend.basics.mapper.StudentMapper;
 
@@ -124,6 +125,59 @@ public class StudentController2 {
         return  new ApiResponse<>("Students fetched successfully",
                 200,
                 students);
+    }
+
+
+    @GetMapping("/search/keyword/{keyword}")
+    public ApiResponse<List<Student>>
+    searchStudentsByKeyword(
+            @PathVariable String keyword)
+    {
+        List<Student> students =
+                studentService
+                        .searchStudentsByName(keyword);
+
+        return new ApiResponse<>(
+                "students fetched successfully",
+                200,
+                students
+        );
+    }
+
+
+    @GetMapping("/search/greater-than/{age}")
+    public ApiResponse<List<Student>>
+    getStudentsAboveAge(
+            @PathVariable int age)
+    {
+        List<Student> students =
+                studentService
+                        .getStudentsAboveAge(age);
+
+        return new ApiResponse<>(
+                "students fetched successfully",
+                200,
+                students
+        );
+    }
+
+    @GetMapping("/pagination")
+    public ApiResponse<Page<Student>>
+    getStudentsWithPagination(
+            @RequestParam int page,
+            @RequestParam int size)
+    {
+        Page<Student> students =
+                studentService
+                        .getStudentsWithPagination(
+                                page,
+                                size);
+
+        return new ApiResponse<>(
+                "students fetched successfully",
+                200,
+                students
+        );
     }
 
 

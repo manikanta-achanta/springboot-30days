@@ -4,6 +4,10 @@ import com.manikanta.springboot_backend.basics.model.Student;
 import com.manikanta.springboot_backend.basics.repository.StudentRepository;
 import com.manikanta.springboot_backend.basics.service.StudentService;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
@@ -90,6 +94,34 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> StudentGetByNameAge(String name,int age)
     {
         return studentRepository.findByNameAndAge(name,age);
+    }
+
+    @Override
+    public List<Student> searchStudentsByName(
+            String keyword)
+    {
+        return studentRepository
+                .findByNameContaining(keyword);
+    }
+
+    @Override
+    public List<Student> getStudentsAboveAge(
+            int age)
+    {
+        return studentRepository
+                .findByAgeGreaterThan(age);
+    }
+
+
+    @Override
+    public Page<Student> getStudentsWithPagination(
+            int page,
+            int size)
+    {
+        Pageable pageable =
+                PageRequest.of(page, size);
+
+        return studentRepository.findAll(pageable);
     }
 
 }

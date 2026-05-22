@@ -1737,3 +1737,72 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+
+# 🚀 Spring Boot Mastery — Day 20
+
+## 📌 Objective
+
+Implement advanced query methods, filtering, sorting concepts, and pagination using Spring Data JPA.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* findByNameContaining()
+* findByAgeGreaterThan()
+* Pagination
+* Pageable
+* Page<T>
+* Filtering
+* Advanced derived queries
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL
+
+---
+
+## 📁 Repository Example
+
+```java id="t20x"
+List<Student> findByNameContaining(String keyword);
+
+List<Student> findByAgeGreaterThan(int age);
+
+Page<Student> findAll(Pageable pageable);
+```
+
+---
+
+## 🎯 Learning Outcome
+
+* Implement advanced filtering APIs
+* Build paginated APIs
+* Understand scalable backend querying
+* Use Spring Data JPA advanced features
+
+---
+
+## 📅 Progress
+
+✔ Day 19: Derived query methods
+✔ Day 20: Pagination and filtering
+⬜ Day 21: Full CRUD API refactoring
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---
+
