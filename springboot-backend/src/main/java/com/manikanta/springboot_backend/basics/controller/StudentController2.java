@@ -63,7 +63,7 @@ public class StudentController2 {
         String response= studentService.deleteStudentByID(id);
         return new ApiResponse<>(
                 response,
-                201,
+                200,
                 null
         );
     }

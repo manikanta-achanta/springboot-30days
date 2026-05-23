@@ -45,12 +45,20 @@ public class StudentServiceImpl implements StudentService {
         return studentRepository.findById(id).orElse(null);
     }
 
+
     @Override
     public String deleteStudentByID(int id)
     {
+        boolean exists= studentRepository.existsById(id);
+        if(!exists)
+        {
+            return "student not found";
+
+        }
         studentRepository.deleteById(id);
         return "student deleted successfully";
     }
+
 
     @Override
     public String updateStudentByID(

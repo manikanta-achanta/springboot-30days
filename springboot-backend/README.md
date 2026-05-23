@@ -1806,3 +1806,76 @@ B.Tech CSE
 
 ---
 
+
+# 🚀 Spring Boot Mastery — Day 21
+
+## 📌 Objective
+
+Refactor CRUD APIs with cleaner update/delete logic and improve backend reliability using existence validation.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* existsById()
+* Safer delete operations
+* Cleaner update logic
+* Reliable CRUD APIs
+* Business validation
+* Professional service design
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL
+
+---
+
+## 📁 Improved CRUD Features
+
+### Delete Validation
+
+```java id="e21x"
+if(!studentRepository.existsById(id))
+{
+    return "student not found";
+}
+```
+
+### Update Validation
+
+```java id="v21x"
+findById(id).orElse(null)
+```
+
+---
+
+## 🎯 Learning Outcome
+
+* Build safer CRUD APIs
+* Validate record existence properly
+* Improve backend reliability
+* Write cleaner service-layer logic
+
+---
+
+## 📅 Progress
+
+✔ Day 20: Pagination and filtering
+✔ Day 21: CRUD refactoring and validation
+⬜ Day 22: Exception handling
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---
+
