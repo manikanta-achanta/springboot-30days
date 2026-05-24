@@ -1,5 +1,6 @@
 package com.manikanta.springboot_backend.basics.service.impl;
 
+import com.manikanta.springboot_backend.basics.exception.StudentNotFoundException;
 import com.manikanta.springboot_backend.basics.model.Student;
 import com.manikanta.springboot_backend.basics.repository.StudentRepository;
 import com.manikanta.springboot_backend.basics.service.StudentService;
@@ -11,7 +12,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 @Service
@@ -68,7 +69,9 @@ public class StudentServiceImpl implements StudentService {
         Student existingStudent = studentRepository.findById(id).orElse(null);
         if(existingStudent==null)
         {
-            return "Student not found";
+            throw new StudentNotFoundException(
+                    "student not found with id: " + id
+            );
         }
         existingStudent.setName(
                 updateStudent.getName());

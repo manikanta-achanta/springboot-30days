@@ -1879,3 +1879,77 @@ B.Tech CSE
 
 ---
 
+
+
+# 🚀 Spring Boot Mastery — Day 22
+
+## 📌 Objective
+
+Implement global exception handling using `@ControllerAdvice` and create professional API error responses.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Exception handling
+* try-catch
+* RuntimeException
+* Custom exceptions
+* `@ControllerAdvice`
+* `@ExceptionHandler`
+* Global API error handling
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL
+
+---
+
+## 📁 Exception Classes
+
+### Custom Exception
+
+```java id="d22x"
+public class StudentNotFoundException
+        extends RuntimeException
+```
+
+### Global Exception Handler
+
+```java id="d22y"
+@ControllerAdvice
+public class GlobalExceptionHandler
+```
+
+---
+
+## 🎯 Learning Outcome
+
+* Handle exceptions globally
+* Build cleaner API error responses
+* Create custom exceptions
+* Improve backend reliability
+
+---
+
+## 📅 Progress
+
+✔ Day 21: CRUD refactoring
+✔ Day 22: Global exception handling
+⬜ Day 23: Validation APIs
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---
+
