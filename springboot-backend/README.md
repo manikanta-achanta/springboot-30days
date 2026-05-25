@@ -1953,3 +1953,72 @@ B.Tech CSE
 
 ---
 
+
+
+# 🚀 Spring Boot Mastery — Day 23
+
+## 📌 Objective
+
+Implement request validation using Bean Validation annotations and handle validation errors globally.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Validation
+* `@Valid`
+* `@NotBlank`
+* `@Min`
+* `@Max`
+* `@Size`
+* Validation exception handling
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Validation
+* Spring Data JPA
+* Hibernate
+* MySQL
+
+---
+
+## 📁 Validation Example
+
+```java id="v23x"
+@NotBlank(message = "name cannot be empty")
+private String name;
+
+@Min(value = 18)
+private int age;
+```
+
+---
+
+## 🎯 Learning Outcome
+
+* Validate API request bodies
+* Prevent invalid database data
+* Handle validation errors professionally
+* Build safer backend APIs
+
+---
+
+## 📅 Progress
+
+✔ Day 22: Exception handling
+✔ Day 23: Request validation
+⬜ Day 24: Final CRUD API improvements
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---
+

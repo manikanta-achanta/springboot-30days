@@ -2,6 +2,8 @@ package com.manikanta.springboot_backend.basics.exception;
 
 import com.manikanta.springboot_backend.basics.dto.ApiResponse;
 
+import org.springframework.web.bind.MethodArgumentNotValidException;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,4 +36,26 @@ public class GlobalExceptionHandler {
                 null
         );
     }
+
+
+    @ExceptionHandler(
+            MethodArgumentNotValidException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ApiResponse<String>
+    handleValidationException(
+            MethodArgumentNotValidException ex)
+    {
+        String errorMessage =
+                ex.getBindingResult()
+                        .getFieldError()
+                        .getDefaultMessage();
+
+        return new ApiResponse<>(
+                errorMessage,
+                400,
+                null
+        );
+    }
+
+
 }

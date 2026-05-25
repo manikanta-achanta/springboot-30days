@@ -4,6 +4,7 @@ import com.manikanta.springboot_backend.basics.dto.ApiResponse;
 import com.manikanta.springboot_backend.basics.dto.StudentDTO;
 import com.manikanta.springboot_backend.basics.service.StudentService;
 import com.manikanta.springboot_backend.basics.model.Student;
+import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 import com.manikanta.springboot_backend.basics.mapper.StudentMapper;
@@ -24,7 +25,7 @@ public class StudentController2 {
 
 
     @PostMapping
-    public ApiResponse<String> createStudent(@RequestBody Student student)
+    public ApiResponse<String> createStudent( @Valid @RequestBody Student student)
     {
         String response= studentService.addStudent(student);
         return new ApiResponse<>(
