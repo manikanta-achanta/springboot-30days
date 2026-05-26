@@ -8,6 +8,7 @@ import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 import com.manikanta.springboot_backend.basics.mapper.StudentMapper;
+import org.springframework.http.ResponseEntity;
 
 
 import java.util.List;
@@ -25,16 +26,26 @@ public class StudentController2 {
 
 
     @PostMapping
-    public ApiResponse<String> createStudent( @Valid @RequestBody Student student)
+    public ResponseEntity<ApiResponse<String>>
+    createStudent(
+            @Valid
+            @RequestBody Student student)
     {
-        String response= studentService.addStudent(student);
-        return new ApiResponse<>(
-                response,
-                201,
-                null
-        );
+        String response =
+                studentService.addStudent(student);
 
+        ApiResponse<String> apiResponse =
+                new ApiResponse<>(
+                        response,
+                        201,
+                        null
+                );
+
+        return ResponseEntity
+                .status(201)
+                .body(apiResponse);
     }
+
 
     @GetMapping
     public ApiResponse<List<Student>> getStudents()
@@ -48,37 +59,74 @@ public class StudentController2 {
     }
 
     @GetMapping("/{id}")
-    public ApiResponse<Student> getById(@PathVariable int id)
+    public ResponseEntity<
+            ApiResponse<StudentDTO>>
+    getStudentById(
+            @PathVariable int id)
     {
-        Student student= studentService.getStudentByID(id);
-        return  new ApiResponse<>(
-                "student fetched successfully",
-                201,
-                student
-        );
+        Student student =
+                studentService
+                        .getStudentByID(id);
+
+        StudentDTO dto =
+                StudentMapper
+                        .convertToDTO(student);
+
+        ApiResponse<StudentDTO> response =
+                new ApiResponse<>(
+                        "student fetched successfully",
+                        200,
+                        dto
+                );
+
+        return ResponseEntity.ok(response);
     }
+
 
     @DeleteMapping("/{id}")
-    public ApiResponse<String> deleteStudent(@PathVariable int id)
+    public ResponseEntity<
+            ApiResponse<String>>
+    deleteStudent(
+            @PathVariable int id)
     {
-        String response= studentService.deleteStudentByID(id);
-        return new ApiResponse<>(
-                response,
-                200,
-                null
-        );
+        String response =
+                studentService
+                        .deleteStudentByID(id);
+
+        ApiResponse<String> apiResponse =
+                new ApiResponse<>(
+                        response,
+                        200,
+                        null
+                );
+
+        return ResponseEntity.ok(apiResponse);
     }
 
-    @PutMapping("/{id}")
-    public ApiResponse<String> updateStudent(@PathVariable int id , @RequestBody Student updateStudent)
-    {
-        String response= studentService.updateStudentByID(id,updateStudent);
-        return new ApiResponse<>(
-                response,
-                201,
-                null
-        );
 
+
+    @PutMapping("/{id}")
+    public ResponseEntity<
+            ApiResponse<String>>
+    updateStudent(
+            @PathVariable int id,
+            @Valid
+            @RequestBody Student updateStudent)
+    {
+        String response =
+                studentService
+                        .updateStudentByID(
+                                id,
+                                updateStudent);
+
+        ApiResponse<String> apiResponse =
+                new ApiResponse<>(
+                        response,
+                        200,
+                        null
+                );
+
+        return ResponseEntity.ok(apiResponse);
     }
 
 

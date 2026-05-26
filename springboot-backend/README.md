@@ -2022,3 +2022,129 @@ B.Tech CSE
 
 ---
 
+
+# 🚀 Spring Boot Mastery — Day 24
+
+## 📌 Objective
+
+Enhance CRUD APIs using ResponseEntity and improve RESTful API response design with proper HTTP status handling.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* ResponseEntity
+* HTTP status codes
+* RESTful API design
+* Cleaner controller responses
+* Professional API structure
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL
+
+---
+
+## 📁 ResponseEntity Example
+
+```java id="r24x"
+return ResponseEntity
+        .status(201)
+        .body(apiResponse);
+```
+
+---
+
+## 🎯 Learning Outcome
+
+* Build RESTful APIs professionally
+* Return proper HTTP status codes
+* Improve API consistency
+* Design cleaner controller responses
+
+---
+
+## 📅 Progress
+
+✔ Day 23: Validation
+✔ Day 24: RESTful response improvements
+⬜ Day 25: Full CRUD project completion
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---
+
+
+# 🚀 Spring Boot Mastery — Day 24
+
+## 📌 Objective
+
+Enhance CRUD APIs using ResponseEntity and improve RESTful API response design with proper HTTP status handling.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* ResponseEntity
+* HTTP status codes
+* RESTful API design
+* Cleaner controller responses
+* Professional API structure
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL
+
+---
+
+## 📁 ResponseEntity Example
+
+```java id="r24x"
+return ResponseEntity
+        .status(201)
+        .body(apiResponse);
+```
+
+---
+
+## 🎯 Learning Outcome
+
+* Build RESTful APIs professionally
+* Return proper HTTP status codes
+* Improve API consistency
+* Design cleaner controller responses
+
+---
+
+## 📅 Progress
+
+✔ Day 23: Validation
+✔ Day 24: RESTful response improvements
+⬜ Day 25: Full CRUD project completion
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---
+
