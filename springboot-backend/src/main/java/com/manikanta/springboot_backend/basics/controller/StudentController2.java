@@ -6,6 +6,7 @@ import com.manikanta.springboot_backend.basics.service.StudentService;
 import com.manikanta.springboot_backend.basics.model.Student;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import com.manikanta.springboot_backend.basics.mapper.StudentMapper;
 import org.springframework.http.ResponseEntity;
@@ -44,6 +45,22 @@ public class StudentController2 {
         return ResponseEntity
                 .status(201)
                 .body(apiResponse);
+    }
+
+    @PostMapping("/bulk")
+    public ResponseEntity<ApiResponse<String>> CreateStudents(
+            @RequestBody List<Student> students)
+    {
+        studentService.SaveAllStudents(students);
+
+        ApiResponse<String> response =
+                new ApiResponse<>(
+                        "Students added successfully",
+                        HttpStatus.CREATED.value(),
+                        null
+                );
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
 

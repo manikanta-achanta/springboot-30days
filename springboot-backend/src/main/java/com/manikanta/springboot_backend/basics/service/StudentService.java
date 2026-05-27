@@ -14,6 +14,8 @@ public interface StudentService {
 
     String addStudent(Student student);
 
+    void SaveAllStudents(List<Student> students);
+
     List<Student> getAllStudents();
 
     Student getStudentByID(int id);

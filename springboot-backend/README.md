@@ -2148,3 +2148,89 @@ B.Tech CSE
 
 ---
 
+# 🚀 Spring Boot Mastery — Day 25
+
+## 📌 Objective
+
+Complete the full CRUD backend project with clean architecture, validation, exception handling, pagination, and MySQL integration.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Full CRUD operations
+* Layered architecture
+* DTO and Mapper pattern
+* Validation
+* Exception handling
+* Pagination
+* Professional API responses
+* MySQL integration
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL
+* Postman
+
+---
+
+## 📁 Final Project Structure
+
+com.manikanta.springboot_backend.basics
+│
+├── controller
+├── dto
+├── exception
+├── mapper
+├── model
+├── repository
+├── service
+│    └── impl
+└── resources
+
+---
+
+## 🎯 Features Implemented
+
+* Create Student API
+* Get All Students API
+* Get Student By ID API
+* Update Student API
+* Delete Student API
+* Pagination APIs
+* Validation
+* Global Exception Handling
+* DTO Mapping
+* MySQL Persistence
+
+---
+
+## 🎯 Learning Outcome
+
+* Build complete backend CRUD systems
+* Apply layered architecture
+* Create scalable REST APIs
+* Integrate Spring Boot with MySQL professionally
+
+---
+
+## 📅 Progress
+
+✔ Phase 3 Completed
+✔ Day 25: Full CRUD project completion
+⬜ Day 26: Advanced exception handling & production concepts
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---

@@ -41,6 +41,13 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public void SaveAllStudents(List<Student> students)
+    {
+        studentRepository.saveAll(students);
+    }
+
+
+    @Override
     public Student getStudentByID(int id)
     {
         return studentRepository.findById(id).orElse(null);
