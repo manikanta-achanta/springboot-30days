@@ -1,11 +1,15 @@
 package com.manikanta.springboot_backend.basics.exception;
 
 import com.manikanta.springboot_backend.basics.dto.ApiResponse;
+import com.manikanta.springboot_backend.basics.dto.ErrorResponse;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDateTime;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
@@ -13,27 +17,34 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(
             StudentNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ApiResponse<String>
+    public ErrorResponse
     handleStudentNotFoundException(
-            StudentNotFoundException ex)
+            StudentNotFoundException ex,
+            HttpServletRequest request)
     {
-        return new ApiResponse<>(
-                ex.getMessage(),
+        return new ErrorResponse(
+                LocalDateTime.now(),
                 404,
-                null
+                "NOT_FOUND",
+                ex.getMessage(),
+                request.getRequestURI()
         );
     }
 
     @ExceptionHandler(Exception.class)
     @ResponseStatus(
             HttpStatus.INTERNAL_SERVER_ERROR)
-    public ApiResponse<String>
-    handleGeneralException(Exception ex)
+    public ErrorResponse
+    handleGeneralException(
+            Exception ex,
+            HttpServletRequest request)
     {
-        return new ApiResponse<>(
-                "Something went wrong",
+        return new ErrorResponse(
+                LocalDateTime.now(),
                 500,
-                null
+                "INTERNAL_SERVER_ERROR",
+                "Something went wrong",
+                request.getRequestURI()
         );
     }
 
@@ -41,19 +52,22 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(
             MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ApiResponse<String>
+    public ErrorResponse
     handleValidationException(
-            MethodArgumentNotValidException ex)
+            MethodArgumentNotValidException ex,
+            HttpServletRequest request)
     {
-        String errorMessage =
+        String message =
                 ex.getBindingResult()
                         .getFieldError()
                         .getDefaultMessage();
 
-        return new ApiResponse<>(
-                errorMessage,
+        return new ErrorResponse(
+                LocalDateTime.now(),
                 400,
-                null
+                "BAD_REQUEST",
+                message,
+                request.getRequestURI()
         );
     }
 

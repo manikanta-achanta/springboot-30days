@@ -2234,3 +2234,70 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+# 🚀 Spring Boot Mastery — Day 26
+
+## 📌 Objective
+
+Implement advanced exception handling using standardized production-ready error response structures.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Structured error responses
+* ErrorResponse DTO
+* Advanced exception handling
+* Global API error standardization
+* Production-ready API design
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL
+
+---
+
+## 📁 Error Response Example
+
+```json id="r26x"
+{
+  "timestamp": "2026-05-28T10:30:00",
+  "status": 404,
+  "error": "NOT_FOUND",
+  "message": "student not found",
+  "path": "/students/999"
+}
+```
+
+---
+
+## 🎯 Learning Outcome
+
+* Build production-style error responses
+* Standardize backend error handling
+* Improve debugging and maintainability
+* Design professional API failure responses
+
+---
+
+## 📅 Progress
+
+✔ Day 25: Full CRUD project completion
+✔ Day 26: Advanced exception handling
+⬜ Day 27: Logging and debugging
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+B.Tech CSE
+
+---
