@@ -8,8 +8,6 @@ import java.util.List;
 
 
 
-import java.util.List;
-
 public interface StudentService {
 
     String addStudent(Student student);

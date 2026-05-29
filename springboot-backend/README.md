@@ -2301,3 +2301,49 @@ Manikanta
 B.Tech CSE
 
 ---
+
+
+# 🚀 Spring Boot Mastery — Day 27
+
+## 📌 Objective
+Learn professional logging and debugging practices in Spring Boot using SLF4J and Logback to improve application monitoring and troubleshooting.
+
+---
+
+## 🧠 Key Concepts Covered
+
+- Logging Fundamentals
+- SLF4J Logger
+- LoggerFactory
+- Log Levels
+  - TRACE
+  - DEBUG
+  - INFO
+  - WARN
+  - ERROR
+- Structured Logging
+- Application Monitoring
+- Debugging Best Practices
+
+---
+
+## ⚙️ Tech Stack
+
+- Java
+- Spring Boot
+- SLF4J
+- Logback
+- Spring Data JPA
+- MySQL
+
+---
+
+## 📁 Logger Configuration Example
+
+```java
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+private static final Logger log =
+        LoggerFactory.getLogger(
+                StudentServiceImpl.class);
