@@ -2347,3 +2347,93 @@ import org.slf4j.LoggerFactory;
 private static final Logger log =
         LoggerFactory.getLogger(
                 StudentServiceImpl.class);
+
+
+```
+
+
+# 🚀 Spring Boot Mastery — Day 28
+
+## 📌 Objective
+
+Implement DTO-based validation and separate API validation responsibilities from database entities.
+
+---
+
+## 🧠 Key Concepts Covered
+
+- Request DTO
+- DTO Validation
+- @Valid
+- Clean Architecture
+- Separation of Concerns
+- Entity vs DTO Responsibilities
+
+---
+
+## ⚙️ Tech Stack
+
+- Java
+- Spring Boot
+- Spring Validation
+- Spring Data JPA
+- Hibernate
+- MySQL
+
+---
+
+## 📁 New DTO
+
+StudentRequestDTO
+
+Contains:
+
+- name validation
+- age validation
+- password validation
+
+---
+
+## 📁 Updated Architecture
+
+Client
+↓
+StudentRequestDTO
+↓
+Validation
+↓
+Controller
+↓
+Service
+↓
+Entity
+↓
+Database
+
+---
+
+## 🎯 Learning Outcome
+
+- Implement DTO-based validation
+- Improve architecture separation
+- Keep entities clean
+- Build production-style APIs
+
+---
+
+## 📅 Progress
+
+✔ Day 27: Logging & Debugging
+
+✔ Day 28: DTO-Based Validation
+
+⬜ Day 29: Advanced DTO Mapping
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+
+B.Tech CSE
+
