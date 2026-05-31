@@ -11,15 +11,12 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NotBlank(message="name cannot be empty")
+
     private  String name;
 
-    @Min(value=18, message="age must be at least 18")
-    @Max(value = 60,message = "age must be less then 60")
+
     private  int age;
 
-
-    @Size(min = 5,message = "password must contain at least 5 characters")
     private String password;
 
     public Student()

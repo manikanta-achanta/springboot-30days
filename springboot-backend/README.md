@@ -2437,3 +2437,93 @@ Manikanta
 
 B.Tech CSE
 
+
+
+# 🚀 Spring Boot Mastery — Day 29
+
+## 📌 Objective
+
+Implement Response DTOs and advanced DTO mapping to create secure and professional API responses.
+
+---
+
+## 🧠 Key Concepts Covered
+
+- Request DTO
+- Response DTO
+- DTO Mapping
+- Entity to DTO Conversion
+- API Security
+- Stream API Mapping
+
+---
+
+## ⚙️ Tech Stack
+
+- Java
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- MySQL
+
+---
+
+## 📁 New DTO
+
+StudentResponseDTO
+
+Contains:
+
+- id
+- name
+- age
+
+Excludes:
+
+- password
+
+---
+
+## 📁 Architecture
+
+Client
+↓
+Request DTO
+↓
+Controller
+↓
+Service
+↓
+Entity
+↓
+Response DTO
+↓
+Client
+
+---
+
+## 🎯 Learning Outcome
+
+- Build secure API responses
+- Separate request and response models
+- Implement advanced DTO mapping
+- Follow enterprise API design practices
+
+---
+
+## 📅 Progress
+
+✔ Day 28: DTO-Based Validation
+
+✔ Day 29: Request DTO vs Response DTO
+
+⬜ Day 30: Logging Configuration & Debugging
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+
+B.Tech CSE
+

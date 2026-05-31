@@ -2,6 +2,8 @@ package com.manikanta.springboot_backend.basics.controller;
 
 import com.manikanta.springboot_backend.basics.dto.ApiResponse;
 import com.manikanta.springboot_backend.basics.dto.StudentDTO;
+import com.manikanta.springboot_backend.basics.dto.StudentRequestDTO;
+import com.manikanta.springboot_backend.basics.dto.StudentResponseDTO;
 import com.manikanta.springboot_backend.basics.service.StudentService;
 import com.manikanta.springboot_backend.basics.model.Student;
 import jakarta.validation.Valid;
@@ -12,6 +14,7 @@ import com.manikanta.springboot_backend.basics.mapper.StudentMapper;
 import org.springframework.http.ResponseEntity;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -27,13 +30,21 @@ public class StudentController2 {
 
 
     @PostMapping
-    public ResponseEntity<ApiResponse<String>>
+    public ResponseEntity<
+            ApiResponse<String>>
     createStudent(
             @Valid
-            @RequestBody Student student)
+            @RequestBody
+            StudentRequestDTO request)
     {
+        Student student =
+                StudentMapper
+                        .convertToEntity(
+                                request);
+
         String response =
-                studentService.addStudent(student);
+                studentService
+                        .addStudent(student);
 
         ApiResponse<String> apiResponse =
                 new ApiResponse<>(
@@ -65,19 +76,32 @@ public class StudentController2 {
 
 
     @GetMapping
-    public ApiResponse<List<Student>> getStudents()
+    public ResponseEntity<ApiResponse<List<StudentResponseDTO>>> getStudents()
     {
-        List<Student>students = studentService.getAllStudents();
-        return new ApiResponse<>(
-                "Students fetched successfully",
-                200,
-                students
-        );
+        List<Student> students =
+                studentService.getAllStudents();
+
+        List<StudentResponseDTO> studentDTOs = new ArrayList<>();
+        for(Student student : students)
+        {
+            studentDTOs.add(StudentMapper.convertToResponseDTO(student));
+        }
+
+
+        ApiResponse<List<StudentResponseDTO>>
+                response =
+                new ApiResponse<>(
+                        "Students fetched successfully",
+                        200,
+                        studentDTOs
+                );
+
+        return ResponseEntity.ok(response);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<
-            ApiResponse<StudentDTO>>
+            ApiResponse<StudentResponseDTO>>
     getStudentById(
             @PathVariable int id)
     {
@@ -85,18 +109,21 @@ public class StudentController2 {
                 studentService
                         .getStudentByID(id);
 
-        StudentDTO dto =
+        StudentResponseDTO dto =
                 StudentMapper
-                        .convertToDTO(student);
+                        .convertToResponseDTO(
+                                student);
 
-        ApiResponse<StudentDTO> response =
+        ApiResponse<StudentResponseDTO>
+                response =
                 new ApiResponse<>(
                         "student fetched successfully",
                         200,
                         dto
                 );
 
-        return ResponseEntity.ok(response);
+        return ResponseEntity.ok(
+                response);
     }
 
 
