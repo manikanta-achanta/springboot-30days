@@ -2527,3 +2527,88 @@ Manikanta
 
 B.Tech CSE
 
+
+
+# 🚀 Spring Boot Mastery — Day 30
+
+## 📌 Objective
+
+Learn logging configuration, log levels, debugging techniques, and production-ready logging practices using Spring Boot and SLF4J.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Logging Configuration
+* Log Levels
+* DEBUG Logging
+* INFO Logging
+* WARN Logging
+* ERROR Logging
+* Package-Specific Logging
+* Stack Trace Analysis
+* Debugging Techniques
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* SLF4J
+* Logback
+* Spring Data JPA
+* MySQL
+
+---
+
+## 📁 Logging Configuration
+
+```properties
+logging.level.root=INFO
+logging.level.com.manikanta.springboot_backend.basics=DEBUG
+```
+
+---
+
+## 📁 Example Logs
+
+```java
+log.debug("Searching student id: {}", id);
+
+log.info("Student fetched successfully");
+
+log.warn("Student not found");
+
+log.error("Database save failed", e);
+```
+
+---
+
+## 🎯 Learning Outcome
+
+* Configure logging levels
+* Understand DEBUG vs INFO logs
+* Analyze stack traces
+* Improve backend debugging skills
+* Follow production logging practices
+
+---
+
+## 📅 Progress
+
+✔ Day 29: Advanced DTO Mapping
+
+✔ Day 30: Logging Configuration & Debugging
+
+⬜ Day 31: Spring Boot Profiles and Environment Configuration
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+
+B.Tech CSE
+
+
