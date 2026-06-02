@@ -2612,3 +2612,55 @@ Manikanta
 B.Tech CSE
 
 
+
+# 🚀 Spring Boot Mastery — Day 31
+
+## 📌 Objective
+
+Learn Spring Boot Profiles and environment-specific configuration management.
+
+---
+
+## 🧠 Key Concepts Covered
+
+- Spring Profiles
+- Environment Configuration
+- application.properties
+- application-dev.properties
+- application-prod.properties
+- Active Profiles
+
+---
+
+## ⚙️ Tech Stack
+
+- Java
+- Spring Boot
+- MySQL
+
+---
+
+## 🎯 Learning Outcome
+
+- Configure multiple environments
+- Separate development and production settings
+- Manage application properties professionally
+- Understand real-world deployment practices
+
+---
+
+## 📅 Progress
+
+✔ Day 30: Logging Configuration & Debugging
+
+✔ Day 31: Spring Profiles & Environment Configuration
+
+⬜ Day 32: Advanced DTO Mapping & Best Practices
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+
+B.Tech CSE
