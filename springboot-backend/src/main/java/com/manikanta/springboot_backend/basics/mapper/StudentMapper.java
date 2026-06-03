@@ -45,6 +45,11 @@ public class StudentMapper {
     convertToResponseDTO(
             Student student)
     {
+
+        if(student == null)
+        {
+            return null;
+        }
         return new StudentResponseDTO(
                 student.getId(),
                 student.getName(),

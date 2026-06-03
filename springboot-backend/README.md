@@ -2664,3 +2664,80 @@ Learn Spring Boot Profiles and environment-specific configuration management.
 Manikanta
 
 B.Tech CSE
+
+
+# 🚀 Spring Boot Mastery — Day 32
+
+## 📌 Objective
+
+Implement advanced DTO mapping practices and centralize entity-to-DTO conversions using a dedicated mapper layer.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* DTO Mapping
+* Mapper Layer
+* Entity to DTO Conversion
+* DTO to Entity Conversion
+* Stream API Mapping
+* Clean Architecture
+* Separation of Concerns
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL
+
+---
+
+## 📁 Mapper Methods
+
+```java
+StudentMapper.toEntity(requestDTO);
+
+StudentMapper.toResponseDTO(student);
+```
+
+---
+
+## 📁 List Mapping
+
+```java
+students.stream()
+        .map(StudentMapper::toResponseDTO)
+        .toList();
+```
+
+---
+
+## 🎯 Learning Outcome
+
+* Centralize conversion logic
+* Improve maintainability
+* Follow enterprise architecture practices
+* Build cleaner service and controller layers
+
+---
+
+## 📅 Progress
+
+✔ Day 31: Spring Profiles
+
+✔ Day 32: Advanced DTO Mapping
+
+⬜ Day 33: Service Layer Best Practices
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+
+B.Tech CSE
+
