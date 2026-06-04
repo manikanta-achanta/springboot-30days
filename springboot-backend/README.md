@@ -2741,3 +2741,71 @@ Manikanta
 
 B.Tech CSE
 
+
+
+# 🚀 Spring Boot Mastery — Day 33
+
+## 📌 Objective
+
+Learn service layer best practices and understand how to properly separate business logic from controllers and repositories.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Service Layer Responsibilities
+* Business Logic
+* Separation of Concerns
+* Controller vs Service vs Repository
+* DTO Mapping Strategy
+* Clean Service Design
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL
+
+---
+
+## 📁 Architecture
+
+Controller
+↓
+Service
+↓
+Repository
+↓
+Database
+
+---
+
+## 🎯 Learning Outcome
+
+* Write cleaner service classes
+* Move business logic into services
+* Keep controllers lightweight
+* Follow enterprise architecture practices
+
+---
+
+## 📅 Progress
+
+✔ Day 32: Advanced DTO Mapping
+
+✔ Day 33: Service Layer Best Practices
+
+⬜ Day 34: API Design Best Practices
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+
+B.Tech CSE
+
