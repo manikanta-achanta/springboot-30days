@@ -2809,3 +2809,73 @@ Manikanta
 
 B.Tech CSE
 
+
+
+# 🚀 Spring Boot Mastery — Day 34
+
+## 📌 Objective
+
+Learn REST API design best practices and implement resource-oriented endpoint structures.
+
+---
+
+## 🧠 Key Concepts Covered
+
+* REST Principles
+* Resource-Based URLs
+* HTTP Methods
+* Path Variables
+* Query Parameters
+* API Versioning
+* Consistent API Responses
+
+---
+
+## ⚙️ Tech Stack
+
+* Java
+* Spring Boot
+* REST APIs
+* Spring MVC
+
+---
+
+## 📁 Example Endpoints
+
+POST   /api/v1/students
+
+GET    /api/v1/students
+
+GET    /api/v1/students/{id}
+
+PUT    /api/v1/students/{id}
+
+DELETE /api/v1/students/{id}
+
+---
+
+## 🎯 Learning Outcome
+
+* Design professional REST APIs
+* Follow industry naming conventions
+* Build scalable endpoint structures
+* Improve API maintainability
+
+---
+
+## 📅 Progress
+
+✔ Day 33: Service Layer Best Practices
+
+✔ Day 34: REST API Design Best Practices
+
+⬜ Day 35: Backend Architecture Review & Best Practices
+
+---
+
+## 🧑‍💻 Author
+
+Manikanta
+
+B.Tech CSE
+
